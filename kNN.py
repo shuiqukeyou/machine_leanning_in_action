@@ -1,7 +1,7 @@
 import operator
 
+from os import listdir
 from numpy import *
-
 
 
 def createDataSet():
@@ -148,6 +148,60 @@ def classifyPerson():
     classiferResult = classfy0((inArr-minVals)/ranges, normMat, datingLabels, 3)
     print('你很可能是这种人：', resultList[classiferResult - 1])
 
+# 装载图片二值化文件为向量
+def img2vecetor(filename):
+    # 创建1 X 1024的numpy数组
+    returnVect = zeros((1, 1024))
+    # 打开数据文件
+    fr = open(filename)
+    # 循环读取前32行（数据为32 X 32）
+    for i in range(32):
+        # 读取第i行
+        lineStr = fr.readline()
+        # 循环读取第i行的每个字符，并将其储存到numpy数组中
+        for j in range(32):
+            returnVect[0, 23*i+j] = int(lineStr[j])
+    # 全部读取完成后返回结果
+    return returnVect
+
+
+def handwritingClassTest():
+    # 空标签集
+    hwLabels = []
+    # 读取训练集文件列表
+    trainingFileList = listdir('./data/ch02/trainingDigits')
+    # 获取训练集文件数目
+    m = len(trainingFileList)
+    # 按照训练集文件数目，创建一个m行1024列的0矩阵
+    trainingMat = zeros((m, 1024))
+    # 加载训练集
+    for i in range(m):
+        fileNameStr = trainingFileList[i]
+        # 除去训练集文件名的扩展名
+        fileStr = fileNameStr.split('.')[0]
+        # 获取训练集文件名中的真值
+        classNumStr = int(fileStr.split('_')[0])
+        # 将训练集文件的真值写入标签中
+        hwLabels.append(classNumStr)
+        # 调用img2vecetor将训练集装载为向量，并写入训练集矩阵中
+        trainingMat[i, : ] = img2vecetor('./data/ch02/trainingDigits/%s'% fileNameStr)
+    # 打开测试集文件，以下几乎同上
+    testFileList = listdir('./data/ch02/testDigits')
+    errorCount = 0
+    mTest = len(testFileList)
+    for i in range(mTest):
+        fileNameStr = testFileList[i]
+        fileStr = fileNameStr.split('.')[0]
+        classNumStr = int(fileStr.split('_')[0])
+        # 转换测试集文件为向量
+        vectorUnderTest = img2vecetor('./data/ch02/testDigits/%s'% fileNameStr)
+        # 调用classfy0进行分类
+        classifierResult = classfy0(vectorUnderTest, trainingMat, hwLabels, 3)
+        print('这个样本被预测为：%d，实际上是%d'%(classifierResult, classNumStr))
+        if (classifierResult != classNumStr):
+            errorCount += 1
+    print('\n错误总数为%d' % errorCount)
+    print('\n总错误率为%f' % (errorCount/mTest))
 
 
 if __name__ == '__main__':
@@ -172,4 +226,7 @@ if __name__ == '__main__':
     # normMat, ranges, minVals = autoNorm(datingDataMat)
     # print(normMat)
     # datingClassTest()
-    classifyPerson()
+    # classifyPerson()
+    # textVector = img2vecetor('./data/ch02/testDigits/0_13.txt')
+    # print(textVector[0, 0:31])
+    handwritingClassTest()
