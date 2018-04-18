@@ -9,26 +9,32 @@ plt.rcParams['font.sans-serif']=['SimHei']
 plt.rcParams['axes.unicode_minus']=False
 # boxstyle：文本框风格，sawtoot：锯齿；round4：圆角4
 # fc：背景灰度，0黑，1白
-decisinoNode = dict(boxstyle='sawtooth', fc='0.8')
+decisionNode = dict(boxstyle='sawtooth', fc='0.8')
 leafNode = dict(boxstyle='round4', fc='0.8')
 # 箭头格式
 arrow_args = dict(arrowstyle='<-')
 
 # 新建图形
-def createPlot():
+def createPlot(inTree):
     # 创建图形实例，编号1，底色为white
     fig = plt.figure(1, facecolor= 'white')
-    # 清空一下当前图形实例
+    # 清空当前图形实例
     fig.clf()
-    # 指定子图规格，111为一行一列的子图划分方式的第一个微珠，frameon：是否显示边框
+    axprops = dict(xticks = [], yticks = [])
+    # 指定子图规格，111为一行一列的子图划分方式的第一个位置，frameon：是否显示边框
     # createPlot.ax1为绑定之后创建的子图
-    createPlot.ax1 = plt.subplot(111, frameon = False)
-    # 创建两个文字标注点，名称，箭头指向位置，箭头起始位置，节点类型
-    plotNode('决策节点', (0.5, 0.1),(0.1, 0.5), decisinoNode)
-    plotNode('-叶节点', (0.8, 0.1), (0.3, 0.8), leafNode)
+    createPlot.ax1 = plt.subplot(111, frameon = False, **axprops)
+    plotTree.totalW = getNumLeafs(inTree)
+    plotTree.totalD = getTreeDepth(inTree)
+    plotTree.xOff = -0.5/plotTree.totalW
+    plotTree.yOff = 1
+    plotTree(inTree, (0.5, 1), '')
+    # # 创建两个文字标注点，名称，箭头指向位置，箭头起始位置，节点类型
+    # plotNode('决策节点', (0.5, 0.1),(0.1, 0.5), decisinoNode)
+    # plotNode('-叶节点', (0.8, 0.1), (0.3, 0.8), leafNode)
     plt.show()
 
-# 创建节点，名称，箭头指向位置，箭头起始位置，节点类型
+# 创建节点。名称，箭头指向位置，箭头起始位置，节点类型
 def plotNode(nodeText, centerPt, parentPt, nodeType):
     # 文本、箭头起始位置、起始位置的数字的意义，axes fraction为占数轴的百分比
     createPlot.ax1.annotate(nodeText, xy = parentPt,xycoords = 'axes fraction',
@@ -39,7 +45,7 @@ def plotNode(nodeText, centerPt, parentPt, nodeType):
     # 指定箭头格式
     arrowprops = arrow_args)
 
-def getNumleafs(myTree):
+def getNumLeafs(myTree):
     # 叶节点计数
     numLeafs = 0
     # 获取第一个关键字
@@ -50,7 +56,7 @@ def getNumleafs(myTree):
     for key in secondDict.keys():
         # 只要子树不是叶节点就递归向下
         if type(secondDict[key]).__name__ == 'dict':
-            numLeafs += getNumleafs(secondDict[key])
+            numLeafs += getNumLeafs(secondDict[key])
         else:
             numLeafs += 1
     return numLeafs
@@ -84,11 +90,28 @@ def plotMidText(cntrPt, parentPt, txtString):
     createPlot.ax1.text(xMid, yMid, txtString)
 
 def plotTree(myTree, parentPt, nodeTxt):
-    pass
+    numLeafs = getNumLeafs(myTree)
+    depth = getTreeDepth(myTree)
+    firstStr = list(myTree.keys())[0]
+    cntrPt = (plotTree.xOff + (1 + numLeafs)/2/plotTree.totalW, plotTree.yOff)
+    plotMidText(cntrPt, parentPt, nodeTxt)
+    plotNode(firstStr, cntrPt, parentPt, decisionNode)
+    secondDict = myTree[firstStr]
+    plotTree.yOff = plotTree.yOff - 1/plotTree.totalD
+    for key in secondDict.keys():
+        if type(secondDict[key]).__name__ == 'dict':
+            plotTree(secondDict[key], cntrPt, str(key))
+        else:
+            plotTree.xOff = plotTree.xOff + 1/plotTree.totalW
+            plotNode(secondDict[key], (plotTree.xOff, plotTree.yOff), cntrPt, leafNode)
+            plotMidText((plotTree.xOff, plotTree.yOff), cntrPt, str(key))
+    plotTree.yOff = plotTree.yOff + 1/plotTree.totalD
+
 
 if __name__ == '__main__':
     # createPlot()
-    print(retrieveTree(1))
-    myTree = retrieveTree(0)
-    print(getNumleafs(myTree))
-    print(getTreeDepth(myTree))
+    # print(retrieveTree(1))
+    # myTree = retrieveTree(0)
+    # print(getNumleafs(myTree))
+    # print(getTreeDepth(myTree))
+    createPlot(retrieveTree(1))
