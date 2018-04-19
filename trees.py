@@ -88,11 +88,11 @@ def majorityCnt(classList):
     classCount = {}
     # 遍历标签
     for vote in classList:
-        # 不存在则写入，并技术
+        # 不存在则写入，并计数
         if vote not in classCount.keys():
             classCount[vote] = 0
         classCount[vote] += 1
-    sortedClassCount = sorted(classCount.item(), key = operator.itemgetter(1), reversed = True)
+    sortedClassCount = sorted(classCount.items(), key = operator.itemgetter(1), reverse = True)
     # 返回出现最多的分类的名称
     return sortedClassCount[0][0]
 
@@ -102,7 +102,7 @@ def createTree(dataSet, labels):
     # 如果当前分类的第一项的计数==当前分类长度，则已完成分类，返回标签
     if classList.count(classList[0]) == len(classList):
         return classList[0]
-    #
+    # 若已进行到最后一项仍未完成分类
     if len(dataSet[0]) == 1:
         # 进行分类投票
         return majorityCnt(classList)
