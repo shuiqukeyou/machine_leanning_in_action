@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f9f4af2-4e43-499a-8dc7-3da00c07b6b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/treePlotter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/trees.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="kNN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3800">
-              <caret line="203" column="43" lean-forward="false" selection-start-line="203" selection-start-column="43" selection-end-line="203" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="221" column="4" lean-forward="false" selection-start-line="221" selection-start-column="4" selection-end-line="221" selection-end-column="112" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -31,24 +29,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trees.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trees.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2187">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="treePlotter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="treePlotter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/treePlotter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="83" column="46" lean-forward="true" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="112">
+              <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+              <folding>
+                <element signature="e#25#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bayes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bayes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-325">
+              <caret line="308" column="24" lean-forward="false" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,6 +67,10 @@
       <find>shape</find>
       <find>ndarray</find>
       <find>simhei</find>
+      <find>__name</find>
+      <find>ate</find>
+      <find>del</find>
+      <find>entries</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,9 +80,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/running.py" />
-        <option value="$PROJECT_DIR$/kNN.py" />
-        <option value="$PROJECT_DIR$/trees.py" />
         <option value="$PROJECT_DIR$/treePlotter.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/trees.py" />
+        <option value="$PROJECT_DIR$/kNN.py" />
+        <option value="$PROJECT_DIR$/bayes.py" />
       </list>
     </option>
   </component>
@@ -118,6 +124,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine_leanning_in_action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="machine_leanning_in_action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -127,24 +147,13 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.treePlotter">
-    <configuration default="false" name="running" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="machineLeanning" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/running.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WorkFiles\Github\machine_leanning_in_action\data\ch04" />
+      <recent name="E:\WorkFiles\Github\machine_leanning_in_action\data\ch03" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.bayes">
     <configuration default="false" name="kNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -192,6 +201,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="machineLeanning" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/treePlotter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="machineLeanning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bayes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="machineLeanning" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -330,23 +373,28 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.running" />
-      <item index="1" class="java.lang.String" itemvalue="Python.kNN" />
-      <item index="2" class="java.lang.String" itemvalue="Python.trees" />
-      <item index="3" class="java.lang.String" itemvalue="Python.treePlotter" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.kNN" />
+      <item index="1" class="java.lang.String" itemvalue="Python.trees" />
+      <item index="2" class="java.lang.String" itemvalue="Python.treePlotter" />
+      <item index="3" class="java.lang.String" itemvalue="Python.bayes" />
+      <item index="4" class="java.lang.String" itemvalue="Python.temp" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.treePlotter" />
-        <item index="1" class="java.lang.String" itemvalue="Python.trees" />
-        <item index="2" class="java.lang.String" itemvalue="Python.kNN" />
-        <item index="3" class="java.lang.String" itemvalue="Python.running" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.bayes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.kNN" />
+        <item index="2" class="java.lang.String" itemvalue="Python.treePlotter" />
+        <item index="3" class="java.lang.String" itemvalue="Python.trees" />
+        <item index="4" class="java.lang.String" itemvalue="Python.temp" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -377,7 +425,49 @@
       <option name="project" value="LOCAL" />
       <updated>1523789360206</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="决策树&#10;">
+      <created>1524067500449</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524067500449</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新增决策树部分数据&#10;">
+      <created>1524155089233</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1524155089233</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修正BUG&#10;">
+      <created>1524155115979</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1524155115979</updated>
+    </task>
+    <task id="LOCAL-00007" summary="决策树部分完毕">
+      <created>1524155128103</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1524155128103</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修正写法">
+      <created>1524664093290</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1524664093290</updated>
+    </task>
+    <task id="LOCAL-00009" summary="朴素贝叶斯部分完毕">
+      <created>1524664108863</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1524664108863</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -387,6 +477,7 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25013775" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5019284" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.4980716" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33604062" sideWeight="0.4936639" order="2" side_tool="false" content_ui="tabs" />
@@ -399,7 +490,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -410,7 +500,13 @@
     <MESSAGE value="K临近算法&#10;" />
     <MESSAGE value="K临近算法部分结束 &#10;" />
     <MESSAGE value="K临近算法部分_测试集、训练集&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="K临近算法部分_测试集、训练集&#10;" />
+    <MESSAGE value="决策树&#10;" />
+    <MESSAGE value="新增决策树部分数据&#10;" />
+    <MESSAGE value="修正BUG&#10;" />
+    <MESSAGE value="决策树部分完毕" />
+    <MESSAGE value="修正写法" />
+    <MESSAGE value="朴素贝叶斯部分完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="朴素贝叶斯部分完毕" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -441,7 +537,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,7 +567,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -497,7 +597,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +627,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -553,7 +657,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -581,7 +687,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,16 +706,6 @@
     <entry file="file://$PROJECT_DIR$/kNN.py" />
     <entry file="file://$PROJECT_DIR$/running.py" />
     <entry file="file://$PROJECT_DIR$/running.py" />
-    <entry file="file://$PROJECT_DIR$/kNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3800">
-          <caret line="203" column="43" lean-forward="false" selection-start-line="203" selection-start-column="43" selection-end-line="203" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/pyml/Lib/site-packages/matplotlib/colors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -622,21 +720,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/ch04/email/ham/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ch03/lenses.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/pyml/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="108" column="18" lean-forward="false" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trees.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2187">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="576">
+          <caret line="145" column="29" lean-forward="false" selection-start-line="145" selection-start-column="29" selection-end-line="145" selection-end-column="29" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="221" column="4" lean-forward="false" selection-start-line="221" selection-start-column="4" selection-end-line="221" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/pyml/Lib/site-packages/matplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="1854" column="0" lean-forward="false" selection-start-line="1854" selection-start-column="0" selection-end-line="1854" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/treePlotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="83" column="46" lean-forward="true" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="112">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="e#25#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="308" column="24" lean-forward="false" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
