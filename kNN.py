@@ -208,25 +208,24 @@ if __name__ == '__main__':
     # group, lables = createDataSet()
     # temp = classfy0([0,0], group, lables, 3)
     # print(temp)
-    # datingDataMat, datingLabals = file2matrix('./data/ch02/datingTestSet2.txt')
+    datingDataMat, datingLabals = file2matrix('./data/ch02/datingTestSet2.txt')
     # print(datingDataMat)
     # print(datingLabals[0:20])
-    # import matplotlib
-    # import matplotlib.pyplot as plt
-    # # 生成一个图表对象
-    # fig = plt.figure()
-    # # 在图表上添加子图，三个参数分别为子图行数、子图列数、子图位置
-    # ax = fig.add_subplot(111)
-    # # 参数为x，y，大小，颜色，标记......
-    # # 在子图中绘制数据的后两项，datingDataMat[:, 1]表示逐行取之后取其第二项
-    # # 之后为15+标记作为各点的大小和颜色，用以区分点
-    # ax.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 15.0 * array(datingLabals), 15.0 * array(datingLabals))
-    # # 绘图
-    # plt.show()
+    import matplotlib.pyplot as plt
+    # 生成一个图表对象
+    fig = plt.figure()
+    # 在图表上添加子图，三个参数分别为子图行数、子图列数、子图位置
+    ax = fig.add_subplot(111)
+    # 参数为x，y，大小，颜色，标记......
+    # 在子图中绘制数据的后两项，datingDataMat[:, 1]表示逐行取之后取其第二项
+    # 之后为15+标记作为各点的大小和颜色，用以区分点
+    ax.scatter(datingDataMat[:, 1], datingDataMat[:, 2], 15.0 * array(datingLabals), 15.0 * array(datingLabals))
+    # 绘图
+    plt.show()
     # normMat, ranges, minVals = autoNorm(datingDataMat)
     # print(normMat)
     # datingClassTest()
     # classifyPerson()
     # textVector = img2vecetor('./data/ch02/testDigits/0_13.txt')
     # print(textVector[0, 0:31])
-    handwritingClassTest()
+    # handwritingClassTest()

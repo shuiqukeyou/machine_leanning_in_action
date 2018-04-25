@@ -114,7 +114,7 @@ def createTree(dataSet, labels):
     myTree = {bestFeatLabel:{}}
     # 在标签集中删除已被划分的标签
     # 划分函数会删除划分轴，故标签组也需要删除掉已经划分好了的标签
-    del(labels[bestFeat])
+    labels.pop(bestFeat)
     # 按照最好的数据集划分方式提取出数据值
     featValues = [example[bestFeat] for example in dataSet]
     # 数据值去重
