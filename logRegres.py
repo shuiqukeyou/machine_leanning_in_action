@@ -112,6 +112,7 @@ def stocGradAscent1(dataMatrix, classLables, numIter = 150):
             dataIndex.pop(randIndex)
     return weights
 
+
 # 分类函数
 def classifVector(inX, weights):
     prob = sigmoid(sum(inX * weights))
@@ -120,32 +121,45 @@ def classifVector(inX, weights):
     else:
         return 0
 
+
+# 读取文件以及进行测试
 def colicTest():
+    # 打开训练集和测试集
     frTrain = open('./data/ch05/horseColicTraining.txt')
     frTest = open('./data/ch05/horseColicTest.txt')
+    # 训练集的数据组和标签组
     trainingSet = []
     trainingLables = []
+    # 按行读取
     for line in frTrain.readlines():
+        # 去除空白并分割
         currLine = line.strip().split('\t')
         lineArr = []
+        # 已经提前知道数据每行为22项（第22项为标签），将每行数据读入为list
         for i in range(21):
             lineArr.append(float(currLine[i]))
+        # 存入该行数据及标签
         trainingSet.append(lineArr)
         trainingLables.append(float(currLine[21]))
+    # 调用梯度上升函数1（变梯度）进行训练
     trainWeights = stocGradAscent1(array(trainingSet), trainingLables, 500)
+    # 错误计数、测试集计数、
     errorCount = 0
     numTestVec = 0
+    # 遍历测试集
     for line in frTest.readlines():
         numTestVec += 1
         currLine = line.strip().split('\t')
         lineArr = []
         for i in range(21):
             lineArr.append(float(currLine[i]))
+        # 对测试集进行分类并判断结果
         if int(classifVector(array(lineArr), trainWeights)) != int(currLine[21]):
             errorCount += 1
     errorRate = errorCount/numTestVec
     print('错误率为:',errorRate)
     return errorRate
+
 
 # 入口函数
 def multiTest():
